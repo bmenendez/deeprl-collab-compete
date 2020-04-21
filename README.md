@@ -28,7 +28,7 @@ The environment is considered solved, when the average (over 100 episodes) of th
    * Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86_64.zip).
 3. Place the file in the root of the folder and unzip it.
 
-4. Run it!
+4. Run it! Consider to change the cell at point 2 of the notebook to match with your folder `env = UnityEnvironment(file_name='Tennis_Linux/Tennis.x86_64')`.
 
 ## Instructions
 

@@ -73,11 +73,13 @@ The environment is solved when the agents are able to get an average score of +0
 
 Since this is just the first version for solving the environment, several actions can be made to improve this project:
 
-1. One of the ideas is to implement a prioritized experience replay in order to see if it speeds up learning.
+1. One of the ideas is to implement a prioritized experience replay (like [this one](https://github.com/Damcy/prioritized-experience-replay) or [this other one](https://github.com/rlcode/per)) in order to see if it speeds up learning. [Paper](https://cardwing.github.io/files/DDPG-SMC.pdf) about that.
 2. The current implementation adds Ornstein-Uhlenbeck noise to the action space. However, it has been shown that adding noise to the parameters of the neural network policy can improve performance.
-3. Implement other algorithms to solve the environment in order to see what is better suited for these kinds of tasks. For starters, I would implement:
+3. Turn off OU noise and use random noise just to see if it works as well.
+4. Adding dropouts in critic network.
+5. Implement other algorithms to solve the environment in order to see what is better suited for these kinds of tasks. For starters, I would implement:
    * [Trust Region Policy Optimization - TRPO](https://arxiv.org/abs/1502.05477).
    * [Proximal Policy Optimization - PPO](https://arxiv.org/abs/1707.06347).
    * [Asynchronous Advantage Actor-Critic - A3C](https://arxiv.org/abs/1602.01783).
    * [Distributed Distributional Deep Deterministic Policy Gradients - D4PG](https://arxiv.org/abs/1804.08617).
-5. There exist another challenge: solving a different and more difficult environment called [Soccer Twos](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#soccer-twos). I would adapt the algorithms for this environment and see how it works.
+6. There exist another challenge: solving a different and more difficult environment called [Soccer Twos](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#soccer-twos). I would adapt the algorithms for this environment and see how it works.
